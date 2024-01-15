@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.0.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>10</x>
+      <y>0</y>
+      <w>340</w>
+      <h>990</h>
+    </coordinates>
+    <panel_attributes>Minatoaquaman::Model
+--
+-d: java.awt.Dimension
+-smallFont: java.awt.Font
+-inGame: boolean
+-dying: boolean
+-BLOCK_SIZE: int
+-N_BLOCKS: int
+-SCREEN_SIZE: int
+-MAX_GHOSTS: int
+-PACMAN_SPEED: int
+-N_GHOSTS: int
+-lives: int
+-score: int
+-dx: int[]
+-dy: int[]
+-ghost_x: int[]
+-ghost_y: int[]
+-ghost_dx: int[]
+-ghost_dy: int[]
+-ghostSpeed: int[]
+-heart: java.awt.Image
+-ghost: java.awt.Image
+-up: java.awt.Image
+-down: java.awt.Image
+-left: java.awt.Image
+-right: java.awt.Image
+-pacman_x: int
+-pacman_y: int
+-pacmand_x: int
+-pacmand_y: int
+-req_dx: int
+-req_dy: int
+-levelData: short[]
+-validSpeeds: int[]
+-maxSpeed: int
+-currentSpeed: int
+-screenData: short[]
+-timer: javax.swing.Timer
+--
++Model(): ctor
+-loadImages(): void
+-initVariables(): void
+-playGame(java.awt.Graphics2D): void
+-showIntroScreen(java.awt.Graphics2D): void
+-drawScore(java.awt.Graphics2D): void
+-checkMaze(): void
+-death(): void
+-moveGhosts(java.awt.Graphics2D): void
+-drawGhost(java.awt.Graphics2D, int, int): void
+-movePacman(): void
+-drawPacman(java.awt.Graphics2D): void
+-drawMaze(java.awt.Graphics2D): void
+-initGame(): void
+-initLevel(): void
+-continueLevel(): void
++paintComponent(java.awt.Graphics): void
++actionPerformed(java.awt.event.ActionEvent): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>360</x>
+      <y>0</y>
+      <w>5170</w>
+      <h>750</h>
+    </coordinates>
+    <panel_attributes>Minatoaquaman::Model
+--
+-d: Dimension
+-smallFont = new Font("Arial", Font.BOLD, 14): Font
+-inGame = false: boolean
+-dying = false: boolean
+-BLOCK_SIZE = 24: int
+-N_BLOCKS = 15: int
+-SCREEN_SIZE = N_BLOCKS * BLOCK_SIZE: int
+-MAX_GHOSTS = 12: int
+-PACMAN_SPEED = 6: int
+-N_GHOSTS = 6: int
+-lives, score: int
+-dx, dy: int[]
+-ghost_x, ghost_y, ghost_dx, ghost_dy, ghostSpeed: int[]
+-heart, ghost: Image
+-up, down, left, right: Image
+-pacman_x, pacman_y, pacmand_x, pacmand_y: int
+-req_dx, req_dy: int
+-levelData[] = { 19, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 22, 17, 16, 16, 16, 16, 24, 16, 16, 16, 16, 16, 16, 16, 16, 20, 25, 24, 24, 24, 28, 0, 17, 16, 16, 16, 16, 16, 16, 16, 20, 0, 0, 0, 0, 0, 0, 17, 16, 16, 16, 16, 16, 16, 16, 20, 19, 18, 18, 18, 18, 18, 16, 16, 16, 16, 24, 24, 24, 24, 20, 17, 16, 16, 16, 16, 16, 16, 16, 16, 20, 0, 0, 0, 0, 21, 17, 16, 16, 16, 16, 16, 16, 16, 16, 20, 0, 0, 0, 0, 21, 17, 16, 16, 16, 24, 16, 16, 16, 16, 20, 0, 0, 0, 0, 21, 17, 16, 16, 20, 0, 17, 16, 16, 16, 16, 18, 18, 18, 18, 20, 17, 24, 24, 28, 0, 25, 24, 24, 16, 16, 16, 16, 16, 16, 20, 21, 0, 0, 0, 0, 0, 0, 0, 17, 16, 16, 16, 16, 16, 20, 17, 18, 18, 22, 0, 19, 18, 18, 16, 16, 16, 16, 16, 16, 20, 17, 16, 16, 20, 0, 17, 16, 16, 16, 16, 16, 16, 16, 16, 20, 17, 16, 16, 20, 0, 17, 16, 16, 16, 16, 16, 16, 16, 16, 20, 25, 24, 24, 24, 26, 24, 24, 24, 24, 24, 24, 24, 24, 24, 28 }: short
+-validSpeeds[] = { 1, 2, 3, 4, 6, 8 }: int
+-maxSpeed = 6: int
+-currentSpeed = 3: int
+-screenData: short[]
+-timer: Timer
+--
++Model(): ctor
+-loadImages(): void
+-initVariables(): void
+-playGame(Graphics2D g2d): void
+-showIntroScreen(Graphics2D g2d): void
+-drawScore(Graphics2D g): void
+-checkMaze(): void
+-death(): void
+-moveGhosts(Graphics2D g2d): void
+-drawGhost(Graphics2D g2d, int x, int y): void
+-movePacman(): void
+-drawPacman(Graphics2D g2d): void
+-drawMaze(Graphics2D g2d): void
+-initGame(): void
+-initLevel(): void
+-continueLevel(): void
++paintComponent(Graphics g): void
++actionPerformed(ActionEvent e): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>5540</x>
+      <y>0</y>
+      <w>310</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>Minatoaquaman::Model$TAdapter
+--
+~this$0: Minatoaquaman.Model
+--
+~Model$TAdapter(Minatoaquaman.Model): ctor
++keyPressed(java.awt.event.KeyEvent): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>10</x>
+      <y>1000</y>
+      <w>200</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>Minatoaquaman::Minatoaqua
+--
+--
++Minatoaqua(): ctor
++main(java.lang.String[]): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>220</x>
+      <y>1000</y>
+      <w>200</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>Minatoaquaman::Minatoaqua
+--
+--
++Minatoaqua(): ctor
++main(String[] args): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>430</x>
+      <y>1000</y>
+      <w>130</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Menu::MenuState
+--
+--
++MenuState(): ctor
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>570</x>
+      <y>1000</y>
+      <w>130</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>Menu::MenuState
+--
+--
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
